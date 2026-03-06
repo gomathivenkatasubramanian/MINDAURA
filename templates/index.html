@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MINDAURA</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="main-container">
+
+    <h1 class="logo-text"> 🧠MINDAURA</h1> 
+
+    <h2 class="subtitle">How are you feeling today?</h2>
+
+    <div class="image-box">
+    <img src="{{ url_for('static', filename='brain.png.png') }}" class="brain-img">
+
+</div>
+
+    <div class="form-box">
+        <!-- your form here -->
+    </div>
+
+</div>
+
+
+
+    <form action="/result" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+
+        <select name="focus">
+    <option value="Often">I can focus clearly on tasks</option>
+    <option value="Sometimes">I lose focus sometimes</option>
+    <option value="Rarely">I struggle to focus</option>
+</select>
+
+<select name="energy">
+    <option value="High">I feel energetic today</option>
+    <option value="Medium">My energy feels average</option>
+    <option value="Low">I feel mentally tired</option>
+</select>
+
+<select name="emotion">
+    <option value="Positive">I feel emotionally positive</option>
+    <option value="Neutral">My mood feels neutral</option>
+    <option value="Negative">I feel emotionally low</option>
+</select>
+
+
+
+        <button type="submit">Check Result</button>
+    </form>
+</div>
