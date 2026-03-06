@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MindAura Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<div class="result-card">
+    <!-- all content -->
+</div>
+
+   <h1 class="result-title">✨ Your MindAura Result ✨</h1>
+
+    <div class="result-card">
+        <h2>Hello <span class="username">{{ name }}</span> 💖</h2>
+<p class="step" style="white-space: pre-line;">
+    {{ message }}
+</p>
+        <img src="{{ url_for('static', filename=image) }}" 
+     class="result-brain"
+     alt="MindAura result">
+
+
+    </div>
+    
+</div>
+
+</body>
+</html>
